@@ -98,21 +98,21 @@ func TestIngestLubm(t *testing.T) {
 }
 
 func TestQuery1(t *testing.T) {
-	err := testQuery("query1.json")
+	err := testQuery("queries/query1.json")
 	if err != nil {
 		t.Error(err)
 	}
 }
 
 func TestQuery2(t *testing.T) {
-	err := testQuery("query2.json")
+	err := testQuery("queries/query2.json")
 	if err != nil {
 		t.Error(err)
 	}
 }
 
 func TestQuery3(t *testing.T) {
-	err := testQuery("query3.json")
+	err := testQuery("queries/query3.json")
 	if err != nil {
 		t.Error(err)
 	}
