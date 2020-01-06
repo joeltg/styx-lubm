@@ -5,35 +5,11 @@
 - [AllegroGraph results (archive)](https://web.archive.org/web/20090208165243/http://agraph.franz.com/allegrograph/agraph_bench_lubm50.lhtml)
 - [Stardog results](https://docs.google.com/spreadsheets/d/1oHSWX_0ChZ61ofipZ1CMsW7OhyujioR28AfHzU9d56k/pubhtml#)
 
-## Utils
-
-Generate data
-
 ```
-java edu.lehigh.swat.bench.uba.Generator -univ 1 -index 0 -seed 0 -onto http://swat.cse.lehigh.edu/onto/univ-bench.owl
+% make data.cid
+% export GOMAXPROCS=128
+% go test -run TestQuery1 -v
 ```
-
-`convert.sh`
-
-```
-rapper -i rdfxml -o nquads -q $1  > $1.nt
-curl --data-binary @$1.nt -H 'Content-Type: application/n-quads' localhost:8086/
-```
-
-Ingest data
-
-```
-find *.owl -maxdepth 1 -type f -exec ./convert.sh {} \;
-```
-
-Count triples
-
-```
-find *.owl.nt | xargs wc -l
-```
-
-first: 2019/12/12 10:34:53 Message: /ipfs/bafybeidmxqxhplipsnnrwmjoqccs4zqwvolp4xvxxzyvhjeufcyqvx7f4y
-last : 2019/12/12 10:58:22 Handled message in 538.707755ms
 
 ## Results
 
@@ -89,6 +65,5 @@ query 2:
 - 5.889972ms
 - 3.825925ms
 - 4.004241ms
--
 
 GOMAXPROCS=128

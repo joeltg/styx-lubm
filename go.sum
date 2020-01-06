@@ -670,6 +670,8 @@ github.com/underlay/styx v0.0.0-20200104215656-07aca53bfa54 h1:SJvLuEjE1TKxS3Qf4
 github.com/underlay/styx v0.0.0-20200104215656-07aca53bfa54/go.mod h1:NiifVcMtI/P2A7AUqY0UMoXgDaJ1wELbHRAdaAxYOAw=
 github.com/underlay/styx v0.0.0-20200106013633-cc066148a328 h1:ywT1AFdx+Xi17mOeCqLgjrRh6zL0djvk2j+/Xzcl+So=
 github.com/underlay/styx v0.0.0-20200106013633-cc066148a328/go.mod h1:NiifVcMtI/P2A7AUqY0UMoXgDaJ1wELbHRAdaAxYOAw=
+github.com/underlay/styx v0.0.0-20200106162638-ad7eb5263317 h1:AroKGzOjy/QQn1rETSAv92ujyjJT5C9NvBvNSxvso00=
+github.com/underlay/styx v0.0.0-20200106162638-ad7eb5263317/go.mod h1:NiifVcMtI/P2A7AUqY0UMoXgDaJ1wELbHRAdaAxYOAw=
 github.com/urfave/cli v1.20.0/go.mod h1:70zkFmudgCuE/ngEzBv17Jvp/497gISqfk5gWijbERA=
 github.com/warpfork/go-wish v0.0.0-20180510122957-5ad1f5abf436 h1:qOpVTI+BrstcjTZLm2Yz/3sOnqkzj3FQoh0g+E5s3Gc=
 github.com/warpfork/go-wish v0.0.0-20180510122957-5ad1f5abf436/go.mod h1:x6AKhvSSexNrVSrViXSHUEbICjmGXhtgABaHIySUSGw=

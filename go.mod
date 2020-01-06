@@ -8,5 +8,5 @@ require (
 	github.com/ipfs/go-ipfs-http-client v0.0.5
 	github.com/ipfs/interface-go-ipfs-core v0.2.5
 	github.com/underlay/json-gold v0.2.1-0.20200104011050-f4fa128bea08
-	github.com/underlay/styx v0.0.0-20200106013633-cc066148a328
+	github.com/underlay/styx v0.0.0-20200106162638-ad7eb5263317
 )

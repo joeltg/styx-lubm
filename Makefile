@@ -1,5 +1,5 @@
 clean:
-	rm -rf data src classes readme.txt log.txt Generator.java canonize
+	rm -rf data src classes readme.txt log.txt canonize
 
 uba1.7.zip:
 	curl http://swat.cse.lehigh.edu/projects/lubm/uba1.7.zip -o uba1.7.zip
@@ -14,19 +14,19 @@ GeneratorLinuxFix.zip:
 Generator.java: GeneratorLinuxFix.zip
 	unzip GeneratorLinuxFix.zip
 
-classes: Generator.java
-	cp Generator.java src/edu/lehigh/swat/bench/uba/Generator.java
+classes: src Generator.java
+	mv Generator.java src/edu/lehigh/swat/bench/uba/Generator.java
 	javac -d classes src/edu/lehigh/swat/bench/uba/*.java
 
-generate: src classes
+generate: classes
 	java -cp classes edu.lehigh.swat.bench.uba.Generator -univ 1 -index 0 -seed 0 -onto http://swat.cse.lehigh.edu/onto/univ-bench.owl
 
-data: generate canonize
+data: generate
 	mkdir data
 	find *.owl -maxdepth 1 -type f -exec sh -c "rapper -i rdfxml -o nquads -q {} > {}.nt" \;
 	go run .
 	rm University*.owl.nt
 	rm University*.owl
 
-root: data
+data.cid: data
 	ipfs add -r -Q --raw-leaves --pin=true --cid-version=1 data | tr -d '\n' > data.cid
