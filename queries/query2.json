@@ -1,0 +1,14 @@
+{
+	"@context": { "@vocab": "http://swat.cse.lehigh.edu/onto/univ-bench.owl#" },
+	"@type": "GraduateStudent",
+	"undergraduateDegreeFrom": {
+		"@id": "_:university",
+		"@type": "University"
+	},
+	"memberOf": {
+		"@type": "Department",
+		"subOrganizationOf": {
+			"@id": "_:university"
+		}
+	}
+}
